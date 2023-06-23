@@ -61,3 +61,19 @@
   border-bottom-right-radius: 0;
   border-bottom-left-radius: var(--border-radius);
 }
+
+@media screen and (max-width: 1024px) {
+  .pricing__container {
+    grid-template-columns: repeat(2, 330px);
+    justify-content: center;
+    gap: 1.875rem;
+  }
+  .pricing__item.best {
+    padding: 1.875rem 2.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pricing__container {
+    grid-template-columns: minmax(250px, 1fr);
+  }
+}

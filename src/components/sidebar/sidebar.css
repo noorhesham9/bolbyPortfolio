@@ -34,3 +34,35 @@
   transform: rotate(-180deg);
   writing-mode: vertical-rl;
 }
+
+.nav__toggle {
+  position: fixed;
+  top: 1.25rem;
+  left: 1.4rem;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  background-color: var(--body-color);
+
+  box-shadow: 2px 2px 4px 0px #00000054;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 1024px) {
+  .aside {
+    left: -110px;
+  }
+  .nav__toggle {
+    display: flex;
+  }
+  .nav__toggle-open {
+    left: 110px;
+  }
+  .show-menu {
+    left: 0;
+  }
+}

@@ -93,3 +93,22 @@
 .work__card:hover .work__mask {
   opacity: 0.9;
 }
+@media screen and (max-width: 1024px) {
+  .work__filters {
+    justify-content: center;
+  }
+  .work__container {
+    grid-template-columns: repeat(2, 330px);
+    justify-content: center;
+    row-gap: 1.875rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .work__container {
+    grid-template-columns: minmax(250px, 1fr);
+  }
+  .work__filters {
+    row-gap: 0.25rem;
+    flex-wrap: wrap;
+  }
+}

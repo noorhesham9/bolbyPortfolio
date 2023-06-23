@@ -17,6 +17,7 @@
 }
 
 .contact__form-div {
+  grid-column: span 2;
   position: relative;
   margin-bottom: 1.875rem;
   height: 3.75rem;
@@ -39,12 +40,37 @@
 }
 .contact__form-area {
   height: 10.25rem;
-  grid-column: span 2;
+  grid-column: span 2 !important;
 }
 
 .contact__form-subject {
-  grid-column: span 2;
+  grid-column: span 2 !important;
 }
 .contact__form-area textarea {
   resize: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .contact__form-div {
+    grid-column: span 1;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .contact__container {
+    grid-template-columns: 300px 360px;
+    justify-content: center;
+    row-gap: 1.875rem;
+  }
+  .contact__form-groub {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contact__container {
+    grid-template-columns: minmax(250px, 1fr);
+    row-gap: 1.875rem;
+  }
+  .contact__info {
+    text-align: center;
+  }
 }
