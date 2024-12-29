@@ -6,7 +6,7 @@ import { Pagination } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Container } from "@mui/material";
+// import { Container } from "@mui/material";
 import "swiper/css/pagination";
 
 const Tetimonials = () => {
@@ -31,30 +31,31 @@ const Tetimonials = () => {
   return (
     <section className="testimonials container section">
       <h2 className="section__title">Clients & Reviews</h2>
-      <Container>
-        <Swiper
-          className="testimonials__container grid"
-          modules={[Pagination]}
-          spaceBetween={30}
-          slidesPerView={1}
-          loop={true}
-          grabCursor
-          navigation
-          pagination={{ clickable: true }}>
-          {data.map(({ id, image, title, subtitle, comment }) => {
-            return (
-              <SwiperSlide key={id} className="testimonials__item">
-                <div className="tumb">
-                  <img src={image} alt="" />
-                </div>
-                <h3 className="testimonials__title"> {title}</h3>
-                <span className="subtitle">{subtitle}</span>
-                <div className="comment">{comment}</div>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-      </Container>
+      {/* <Container> */}
+      <Swiper
+        className="testimonials__container grid"
+        modules={[Pagination]}
+        spaceBetween={30}
+        slidesPerView={1}
+        loop={true}
+        grabCursor
+        navigation
+        pagination={{ clickable: true }}
+      >
+        {data.map(({ id, image, title, subtitle, comment }) => {
+          return (
+            <SwiperSlide key={id} className="testimonials__item">
+              <div className="tumb">
+                <img src={image} alt="" />
+              </div>
+              <h3 className="testimonials__title"> {title}</h3>
+              <span className="subtitle">{subtitle}</span>
+              <div className="comment">{comment}</div>
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
+      {/* </Container> */}
     </section>
   );
 };
